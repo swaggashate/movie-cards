@@ -26,55 +26,76 @@
             padding: 15px;
             display: grid;
             gap: 15px;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
 
-        article {
+        .card {
             border: 1px solid firebrick;
             border-radius: 12px;
             padding: 12px;
             /* margin-bottom: 15px; */
         }
 
+        .tag {
+            font-size: 20px;
+            color: #662323;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 7px 0;
+        }
+
+        @media (min-width: 700px) {
+            .featured {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
 
     </style>
 </head>
 <body>
     <header>
         <div>Movie Cards</div>
-        <label for="">
+        <label for="genre">
             Genre:
-            <select name="" id="">
-                <option value="">All</option>
-                <option value="">Action</option>
-                <option value="">Sci-Fi</option>
-                <option value="">Drama</option>
+            <select id="genre">
+                <option value="all">All</option>
+                <option value="action">Action</option>
+                <option value="scifi">Sci-Fi</option>
+                <option value="drama">Drama</option>
             </select>
         </label>
     </header>
 
-    <section>
-        <article>
-            <div>Sci-Fi (Featured)</div>
-            <div>Interstellar</div>
+    <section class="grid">
+        <article class="card featured" data-genre="scifi">
+            <div class="tag">Sci-Fi (Featured)</div>
+            <div class="title">Interstellar</div>
             <div>This card spans bigger on wider screens</div>
         </article>
-        <article>
-            <div>Action</div>
-            <div>Fast & Furious</div>
-            <div>Just a reguar card</div>
+        <article class="card" data-genre="action">
+            <div class="tag">Action</div>
+            <div class="title">Fast & Furious</div>
+            <div>Just a regular card</div>
         </article>
-        <article>
-            <div>Comedy</div>
-            <div>Wedding Crashers</div>
-            <div>Just a reguar card</div>
+        <article class="card" data-genre="comedy">
+            <div class="tag">Comedy</div>
+            <div class="title">Wedding Crashers</div>
+            <div>Just a regular card</div>
         </article>
-        <article>
-            <div>Drama</div>
-            <div>The Shawshank Redemption</div>
-            <div>Just a reguar card</div>
+        <article class="card" data-genre="drama">
+            <div class="tag">Drama</div>
+            <div class="title">The Shawshank Redemption</div>
+            <div>Just a regular card</div>
         </article>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
