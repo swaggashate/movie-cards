@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 12px;
+            border-bottom: 1px solid firebrick;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section {
+            padding: 15px;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        article {
+            border: 1px solid firebrick;
+            border-radius: 12px;
+            padding: 12px;
+            /* margin-bottom: 15px; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>Movie Cards</div>
+        <label for="">
+            Genre:
+            <select name="" id="">
+                <option value="">All</option>
+                <option value="">Action</option>
+                <option value="">Sci-Fi</option>
+                <option value="">Drama</option>
+            </select>
+        </label>
+    </header>
+
+    <section>
+        <article>
+            <div>Sci-Fi (Featured)</div>
+            <div>Interstellar</div>
+            <div>This card spans bigger on wider screens</div>
+        </article>
+        <article>
+            <div>Action</div>
+            <div>Fast & Furious</div>
+            <div>Just a reguar card</div>
+        </article>
+        <article>
+            <div>Comedy</div>
+            <div>Wedding Crashers</div>
+            <div>Just a reguar card</div>
+        </article>
+        <article>
+            <div>Drama</div>
+            <div>The Shawshank Redemption</div>
+            <div>Just a reguar card</div>
+        </article>
+    </section>
+
+</body>
+</html>
